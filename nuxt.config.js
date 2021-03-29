@@ -17,9 +17,22 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: "preconnect", href: "https://fonts.gstatic.com"
+      },
+      { href: "https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap", rel: "stylesheet" }
+    ],
+    script: [
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js' }
     ]
   },
+
+
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: [
+    'nuxt-gsap'
+  ],
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -34,11 +47,11 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    "nuxt-gsap"
   ],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
+  nuxtGsap: {
+    imports: ['TweenLite'] // Specify the gsap modules you want to import. By default, gsap & Linear are loaded
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
