@@ -1,8 +1,10 @@
 <template>
   <div class="container">
     <div class="wrapper">
-      <h1>Guillaume Tonneau</h1>
-      <h1 class="interrogation">?</h1>
+      <NuxtLink to="admis" class="text-wrapper">
+        <h1>Guillaume Tonneau</h1>
+        <h1 class="interrogation">?</h1>
+      </NuxtLink>
     </div>
   </div>
 </template>
@@ -48,11 +50,15 @@ body {
   cursor: pointer;
 }
 
-.wrapper h1:hover {
+.text-wrapper:hover {
   text-shadow: -1px -1px 0 var(--beige), 0 -1px 0 var(--beige),
     1px -1px 0 var(--beige), 1px 0 0 var(--beige), 1px 1px 0 var(--beige),
     0 1px 0 var(--beige), -1px 1px 0 var(--beige), -1px 0 0 var(--beige);
   color: var(--background);
+}
+
+.text-wrapper {
+  display: flex;
 }
 
 h1 {
