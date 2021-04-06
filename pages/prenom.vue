@@ -98,4 +98,15 @@ h1 {
   font-size: 5rem;
   cursor: default;
 }
+@media screen and (max-width: 1520px) {
+  .wrapper h1 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .wrapper h1 {
+    font-size: 3rem;
+  }
+}
 </style>

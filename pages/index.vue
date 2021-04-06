@@ -123,4 +123,16 @@ h1 {
 .header4 {
   margin-top: 5rem;
 }
+
+@media screen and (max-width: 1520px) {
+  .container h1 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .container h1 {
+    font-size: 3rem;
+  }
+}
 </style>
