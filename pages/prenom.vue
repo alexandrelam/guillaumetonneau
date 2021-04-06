@@ -1,9 +1,15 @@
 <template>
   <div class="container">
     <div class="wrapper">
+      <h1 class="candidats">Sélectionnez un candidat :</h1>
       <NuxtLink to="admis" class="text-wrapper">
-        <h1>Guillaume Tonneau</h1>
-        <h1 class="interrogation">?</h1>
+        <div class="arrow-wrapper">
+          <div class="arrow">
+            <span class="arrow-span">➡️</span>
+          </div>
+          <h1>Guillaume Tonneau</h1>
+          <h1 class="interrogation">?</h1>
+        </div>
       </NuxtLink>
     </div>
   </div>
@@ -38,6 +44,29 @@ body {
   color: var(--beige);
 }
 
+.arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.arrow-span {
+  animation: 0.5s linear 0.5s infinite alternate slidein;
+  left: 2.3em;
+  font-size: 5rem;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 5%;
+    width: 5%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 5%;
+  }
+}
 .wrapper {
   height: 100vh;
   background-color: var(--background);
@@ -57,12 +86,16 @@ body {
   color: var(--background);
 }
 
-.text-wrapper {
-  display: flex;
-}
-
 h1 {
   margin: 0 1rem;
-  font-size: 9rem;
+  font-size: 7rem;
+}
+
+.wrapper h1.candidats {
+  position: absolute;
+  top: 2rem;
+  left: 5rem;
+  font-size: 5rem;
+  cursor: default;
 }
 </style>

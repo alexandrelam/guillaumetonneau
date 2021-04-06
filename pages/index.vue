@@ -6,7 +6,12 @@
       <h1 class="header3">l'innovation</h1>
     </div>
     <NuxtLink to="prenom">
-      <h1 class="header4 button">Admission 2021</h1>
+      <div class="arrow-wrapper">
+        <div class="header4 arrow">
+          <span class="arrow-span">➡️</span>
+        </div>
+        <h1 class="header4 button">Admission 2021</h1>
+      </div>
     </NuxtLink>
   </div>
 </template>
@@ -57,11 +62,12 @@ a {
 body {
   margin: 0;
   color: var(--beige);
+  text-align: center;
 }
 
 h1 {
   margin: 0 2rem;
-  font-size: 9rem;
+  font-size: 7rem;
   cursor: default;
 }
 
@@ -82,10 +88,39 @@ h1 {
   transition-duration: 1000;
 }
 
+.arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.arrow-span {
+  animation: 0.5s linear 0.5s infinite alternate slidein;
+  left: 2.3em;
+  font-size: 5rem;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 5%;
+    width: 5%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 5%;
+  }
+}
+
 .button:hover {
   text-shadow: -1px -1px 0 var(--beige), 0 -1px 0 var(--beige),
     1px -1px 0 var(--beige), 1px 0 0 var(--beige), 1px 1px 0 var(--beige),
     0 1px 0 var(--beige), -1px 1px 0 var(--beige), -1px 0 0 var(--beige);
   color: var(--background);
+}
+
+.header4 {
+  margin-top: 5rem;
 }
 </style>
